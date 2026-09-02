@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness AI</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+    <header>
+        <h1>🥗 Fitness AI</h1>
+        <p>Log a meal and get instant calorie tracking + advice.</p>
+    </header>
+
+    <main>
+        <section class="log-meal">
+            <textarea id="mealInput" placeholder="e.g. 2 eggs, a bowl of rice, and grilled chicken"></textarea>
+            <button id="analyzeBtn">
+                <span class="spinner"></span>
+                <span class="btn-label">Log Meal</span>
+            </button>
+        </section>
+
+        <section class="results" id="resultsSection" style="display:none;">
+            <h2>Meal Breakdown</h2>
+            <p class="total">Total: <span id="totalCalories"></span> cal</p>
+            <button type="button" id="toggleBreakdownBtn" class="link-btn">Show details</button>
+            <div id="foodList" class="food-list" hidden></div>
+            <p class="advice" id="advice"></p>
+        </section>
+
+        <section class="daily-summary">
+            <h2>Today's Total</h2>
+            <p id="dailyTotal">0 cal</p>
+        </section>
+        <section class="fitness-profile">
+            <h2>Fitness Advice</h2>
+            <div class="field-row">
+                <div class="field">
+                    <label for="weightInput">Weight</label>
+                    <div class="input-with-toggle">
+                        <input type="number" id="weightInput" placeholder="70">
+                        <div class="unit-toggle" data-target="weight">
+                            <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                            <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="heightInput">Height</label>
+                    <div class="input-with-toggle">
+                        <input type="number" id="heightInput" placeholder="175">
+                        <div class="unit-toggle" data-target="height">
+                            <button type="button" class="unit-btn active" data-unit="cm">cm</button>
+                            <button type="button" class="unit-btn" data-unit="in">in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="goalInput">Goal</label>
+                    <select id="goalInput">
+                        <option value="lose weight">Lose weight</option>
+                        <option value="maintain weight">Maintain weight</option>
+                        <option value="gain muscle">Gain muscle</option>
+                        <option value="general health">General health</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="activityInput">Activity level</label>
+                    <select id="activityInput">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="moderate">Moderately active</option>
+                        <option value="active">Very active</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="fitnessAdviceBtn">
+                <span class="spinner"></span>
+                <span class="btn-label">Get Advice</span>
+            </button>
+
+            <div id="fitnessResults" style="display:none;">
+                <p><strong>BMI:</strong> <span id="bmiValue"></span> (<span id="bmiCategory"></span>)</p>
+                <p id="fitnessAdviceText"></p>
+            </div>
+        </section>
+
+<section class="fitness-qa">
+    <h2>Ask a Fitness Question</h2>
+    <textarea id="fitnessQuestionInput" placeholder="e.g. How many days a week should I strength train?"></textarea>
+
+    <div class="checkbox-row">
+        <input type="checkbox" id="useProfileToggle" checked>
+        <label for="useProfileToggle">Use my profile info above for context</label>
+    </div>
+
+    <button id="askFitnessBtn">
+        <span class="spinner"></span>
+        <span class="btn-label">Ask</span>
+    </button>
+
+    <div id="fitnessQAHistory"></div>
+</section>
+    </main>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
