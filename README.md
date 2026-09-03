@@ -43,7 +43,6 @@ before ever reaching an explicitly-labeled AI estimate.
 <img width="782" height="1025" alt="image" src="https://github.com/user-attachments/assets/c2857c3a-45f5-4694-867b-1f3a2d7ef728" />
 
 <img width="757" height="1031" alt="image" src="https://github.com/user-attachments/assets/02b3d58e-47eb-49b9-9668-ea315b724f35" />
-   for meal analysis and advice generation to work
 
 ## Limitations
 - Meal history is in-memory and resets when the backend restarts
