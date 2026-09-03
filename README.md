@@ -1,11 +1,5 @@
 # 🥗 Fitness AI
 
-<img width="802" height="930" alt="image" src="https://github.com/user-attachments/assets/d6067929-9d6d-4cb7-bef2-c7d03b4b8b19" />
-
-<img width="782" height="1025" alt="image" src="https://github.com/user-attachments/assets/c2857c3a-45f5-4694-867b-1f3a2d7ef728" />
-
-<img width="757" height="1031" alt="image" src="https://github.com/user-attachments/assets/02b3d58e-47eb-49b9-9668-ea315b724f35" />
-
 Log a meal in plain English and get calorie tracking, general fitness
 advice, and BMI insights — powered by a local LLM (Ollama) and real
 nutrition databases, not AI guesswork.
@@ -42,6 +36,13 @@ before ever reaching an explicitly-labeled AI estimate.
 6. Terminal 1: `py -m uvicorn main:app --reload --port 8000`
 7. Terminal 2 (inside `frontend/`): `python -m http.server 5500`
 8. Visit `http://localhost:5500` — **Ollama must be running locally**
+
+## Examples of usage:
+<img width="802" height="930" alt="image" src="https://github.com/user-attachments/assets/d6067929-9d6d-4cb7-bef2-c7d03b4b8b19" />
+
+<img width="782" height="1025" alt="image" src="https://github.com/user-attachments/assets/c2857c3a-45f5-4694-867b-1f3a2d7ef728" />
+
+<img width="757" height="1031" alt="image" src="https://github.com/user-attachments/assets/02b3d58e-47eb-49b9-9668-ea315b724f35" />
    for meal analysis and advice generation to work
 
 ## Limitations
